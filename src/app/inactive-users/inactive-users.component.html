@@ -1,0 +1,8 @@
+<h3>Inactive Users {{userService.switchedToInactive}}</h3>
+<ul class="list-group">
+  <li
+    class="list-group-item"
+    *ngFor="let user of userService.getInactiveUsers();">
+    {{ user.name }} | <a href="#" (click)="onSetToActive(user.id)">Set to Active</a>
+  </li>
+</ul>
